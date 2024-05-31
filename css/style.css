@@ -7,8 +7,8 @@
   /*====== Colors ======*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --hue: 230;
-  --first-color: hsl(var(--hue), 55%, 55%);
-  --first-color-light: hsl(var(--hue), 55%, 65%);
+  --first-color: hsl(var(--hue), 75%, 45%);
+  --first-color-light: hsl(var(--hue), 99%, 55%);
   --first-color-alt: hsl(var(--hue), 50%, 50%);
   --title-color: hsl(var(--hue), 30%, 95%);
   --text-color: hsl(var(--hue), 20%, 80%);
@@ -118,7 +118,7 @@ img {
   padding-block: 5rem 2rem;
 }
 
-.section__title {
+.section_title {
   text-align: center;
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
@@ -280,7 +280,8 @@ img {
   color: var(--title-color);
   display: inline-flex;
   column-gap: .5rem;
-  justify-items: center;
+  align-items: center;
+  justify-self: center;
   margin-top: 3rem;
 }
 
@@ -289,7 +290,7 @@ img {
   width: 32px;
   height: 32px;
   display: grid;
-  place-items: 1.5rem;
+  place-items: center;
   font-size: 1.5rem;
   overflow: hidden;
 }
@@ -316,4 +317,47 @@ img {
     transform: translateY(.6rem);
     opacity: 0;
   }
+}
+
+/*====== WORK ======*/
+.work{
+  background-color: var(--container-color);
+}
+
+.work_card{
+  background-color: var(--first-color);
+}
+
+.work_link{
+  display: block;
+  position: relative;
+  background-color: var(--body-color);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  color: var(--text-color);
+  transition: transform .4s;
+}
+
+.work_title{
+  font-size: var(--h3-font-size);
+  margin-bottom: .75rem;
+}
+
+.work_description{
+  margin-bottom: 1.5rem;
+}
+
+.work_link i{
+  position: absolute;
+  top: 1.8rem;
+  right: 1.5rem;
+  font-size: var(--first-color-light);
+  transition: transform .4s;
+}
+
+.work_link:hover{
+  transform: translateY(-.35rem);
+}
+
+.work_link:hover i{
+  transform: translateX(.5rem);
 }
