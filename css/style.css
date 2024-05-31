@@ -147,6 +147,10 @@ img {
   align-items: center;
 }
 
+.nav_menu{
+  display: none;
+}
+
 .nav_logo{
   color: var(--title-color);
   font-weight: var(--font-bold);
@@ -154,14 +158,20 @@ img {
 
 .nav_toggle,
 .nav_close{
-  font-size: 1.5rem;
-  color: var(--title-color);
-  cursor: pointer;
+  display: none;
 }
 
 /* mobile devices navigation */
 @media screen and (max-width: 1150px){
+  .nav_toggle,
+.nav_close{
+  display: block;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
   .nav_menu{
+    display: block;
     position: fixed;
     top: 0;
     right: -100%;
